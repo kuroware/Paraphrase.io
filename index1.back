@@ -1,0 +1,155 @@
+<?php
+require_once 'navbar.php';
+require_once 'includes/user.php';
+?>
+<html ng-app="app">
+	<head>
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<link rel="stylesheet" type="text/css" href="css/basic.css">
+		<link rel="stylesheet" type="text/css" href="css/index.css">
+		<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+		<link rel="stylesheet" type="text/css" href="css/angucomplete/angucomplete.css">
+	</head>
+	<body ng-controller="main" class="container-fluid">
+		<div class="row">
+			<div class="col-md-10 col-md-offset-1">
+				<tabset>
+					<tab>
+						<tab-heading>
+							Polyphrase
+						</tab-heading>
+						<div class="row">
+							<div class="col-md-12">
+								<div class="row row-centered">
+									<p>
+										Paraphrase is an attempt to make picking up new languages and learning program a lot easier. Instead of needing to learn or google the library, methods, function names, and multiple identical concepts with differing syntax and names in new languages, you can simply convert directly to the language you are learning.
+									</p>
+								</div>
+							</div>
+						</div>
+						<div class="row">
+							<div class="col-md-12">
+								<div class="row row-centered">
+									<p>
+										<h2>Supported Languages</h2>
+										PHP, Javascript, C, Python, Ruby, Swift, Java, C++, C#, AngularJS
+									</p>
+								</div>
+							</div>
+						</div>
+						<div class="row">
+							<div class="col-md-12">
+								<form class="form-horizontal col-md-offset-1">
+									<div class="col-md-7">
+										<angucomplete id="members"
+								              placeholder="Search functions/methods"
+								              pause="400"
+								              selectedobject="code1"
+								              url="http://localhost/codetranslator/postrequests/addFunction/searchFunction.php?function="
+								              titlefield="title"
+								              descriptionfield = "summary"
+								              inputclass="form-control form-control-small">
+								        </angucomplete>
+							<!-- 			<input type="text" class="form-control" ng-model="code1" placeholder = "Enter any code method/function" required minlength="3"> -->
+					<!-- 					<p class="help-text" ng-show="autoLanguage && autoLanguage.language_id">{{autoLanguage.language_name}} detected. Were we wrong? You can select the correct language in the first dropdown menu</p>
+										<p class="help-text" ng-show="autoLanguage && !autoLanguage.language_id">{{autoLanguage.language_name}} was detected. If we're missing a command, you can help improve our results and add the syntax it <a href="add.php">here</a></p> -->
+									</div>
+					<!-- 				<div class="col-md-2" ng-show="autoLanguage">
+										<select ng-model="lan1" class="form-control" ng-show="autoLanguage">
+											<option ng-repeat="language in languages" ng-selected="language.language_id == autoLanguage.language_id" ng-value="language.language_id">{{language.language_name}}</option>
+										</select>
+									</div> -->
+									<div class="col-md-1" style="width:10px;padding-top:8px;margin-left:-15px;">
+										to
+									</div>
+									<div class="col-md-2">
+										<select ng-model="lan2" class="form-control">
+											<option ng-repeat="language in languages" ng-selected="language.language_id == default" ng-value="language.language_id">{{language.language_name}}</option>
+										</select>
+									</div>
+									<div class="col-md-2" style="padding-right:0px;">
+										<input type="submit" ng-click="translate()" class="btn btn-default" value="Equivalence">
+									</div>
+								</form>
+							</div>
+						</div>
+						<div class="row">
+							<div class="col-md-12">
+								<p style="text-align:center;">
+								<h4 style="text-align:center;">48 searches done today, 5 new translations mapped today</h4>
+								</p>
+							</div>
+						</div>
+					</tab>
+					<tab>
+						<tab-heading>Statistics</tab-heading>
+						<div class="row">
+							<div class="col-md-12">
+								<div class="row row-centered">
+									<h2>Statistics</h2>
+									<tabset>
+									    <tab heading="Indexed Functions">
+									    	<div ng-if="showStats">
+										    	<fusioncharts width="100%" height="300px" type="MSLine" datasource="{{stats[0]}}">
+												</fusioncharts>
+											</div>
+									    </tab>
+									    <tab heading="Language Popularity">
+									    	<div ng-if="showStats">
+										    	<fusioncharts width="100%" height="300px" type="MSLine" datasource="{{stats[1]}}">
+												</fusioncharts>
+											</div>
+									    </tab>
+								    </tabset>
+								</div>
+							</div>	
+						</div>
+					</tab>
+					<tab>
+						<tab-heading>Top Users</tab-heading>
+						<div class="row">
+							<div class="col-md-12">
+								<table class="table table-striped table-hover ">
+									<thead>
+										<th>Ranking</th>
+										<th>Username</th>
+										<th>Reptuation</th>
+										<th>Top Category</th>
+										<th>Weekly Change</th>
+										<th>Daily Change</th>
+									</thead>
+									<tbody>
+										<tr ng-repeat="user in topUsers">
+											<td>
+												<img src="ui/medal_1.png" ng-show="$index == 0" height="20">
+												<img src="ui/medal_2.png" ng-show="$index == 1" height="20">
+												<img src="ui/medal_3.png" ng-show="$index == 2" height="20">
+												{{$index + 1}}
+											</td>
+											<td><a ng-href="profile.php?id={{user.user_id}}">{{user.username}}</a></td>
+											<td>
+												{{user.points}}&nbsp;<span class="label label-success" ng-show="user.weekly_point_percentage_change >= 0">+{{user.weekly_point_percentage_change}}% from last week</span>
+												<span class="label label-success" ng-show="user.weekly_point_percentage_change < 0">-{{user.weekly_point_percentage_change}}% from last week</span>
+											</td>
+											<td>PHP</td>
+											<td style="color:green" ng-show="user.weekly_ranking_change >= 0"><strong>+ {{user.weekly_ranking_change}}</strong></td>
+											<td style="color:red" ng-show="user.weekly_ranking_change < 0"><strong>- {{user.weekly_ranking_change}}</strong></td>
+											<td>{{user.daily_ranking_change}}</td>
+										</tr>
+									</tbody>
+								</table>
+							</div>
+						</div>
+					</tab>
+				</tabset>
+			</div>
+		</div>
+	</body>
+</html>
+<script src="dependencies/fusioncharts/js/fusioncharts.js"></script>
+<script src="dependencies/fusioncharts/js/themes/fusioncharts.theme.ocean.js"></script>
+<script src="dependencies/angularJS/angular.min.js"></script>
+<script src="dependencies/angular-bootstrap/ui-bootstrap-tpls-0.13.0.min.js"></script>
+<script src="dependencies/angucomplete-master/angucomplete.js"></script>
+<script src="dependencies/angular-fusioncharts/dist/angular-fusioncharts.min.js"></script>
+<script src="angular/index/index.js"></script>

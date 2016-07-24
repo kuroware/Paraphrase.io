@@ -1,0 +1,53 @@
+.relatedFunction{
+	margin-bottom:5px;
+}
+.relatedFunction a{
+	display:block;
+}
+.relatedFunction small {
+	padding-left:5%;
+}
+
+.parameter p{
+	padding-left:3%;
+	margin-top:5px;
+}
+
+.bigO p {
+	padding-left:3%;
+	margin-top:5px;
+}
+
+.bigO h5 {
+	padding-bottom:0px;
+	margin-bottom:0px;
+
+}
+
+.functionNote {
+	margin-bottom:5px;
+}
+
+.optionBar a {
+	padding:0px;
+	margin-right:5px;
+}
+
+.authorBox {
+	display:inline-block;
+	float:right;
+	height:50px;
+}
+.authorBox img {
+	display:inline-block;
+	height:50px;
+	width:auto;
+}
+.authorBox a {
+	display:inline-block;
+	vertical-align: top;
+}
+
+.noteUpvotes {
+	min-height:50px;
+}

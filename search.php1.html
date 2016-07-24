@@ -1,0 +1,467 @@
+ <?php
+error_reporting(0);
+session_start();
+function __autoload($class_name) {
+	/*
+	Last chance for PHP script to call a class name
+	 */
+	if ($class_name == 'OutgoingTranslation' || 'IncomingTranslation') {
+		require_once $_SERVER['DOCUMENT_ROOT'] . '/includes/Translate.php';
+	}
+	require_once $_SERVER['DOCUMENT_ROOT'] . "/includes/$class_name.php";
+}
+require_once 'navbar.php';
+$mysqli = Database::connection(); //MySQL connection variable
+$search_phrase = Database::sanitize($_GET['search_phrase']); //Holding variable for the search phrase
+$language = is_numeric($_GET['src']) ? $_GET['src'] : null; //The source that is being searched for - language id
+
+//Fetch translations done today
+$stats = Database::pull_search_stats_today();
+$translations_today = $stats['translations_done_today'];
+$new_translations = $stats['new_translation_requests_today'];
+
+//---------------------------------------Parsing for possible translation request---------------------------------
+if ($language) {
+	//Because we can have `all` search functionality later
+
+	//First check if this is a possible translation request, which should be only 
+	$possible_function_phrase = trim($search_phrase);
+	$possible_function_phrase = Database::sanitize(trim($search_phrase, '.')); //Since dot access attribute is not included in indexed function names
+	if (!strpos($possible_function_phrase, ' ')) {
+		$translation = true;
+		//Check if the search phrase is a function that exists in the database
+		$second_possiblity = (!strpos($possible_function_phrase, '()')) ? $possible_function_phrase . '()' : rtrim($possible_function_phrase, '()');
+		$sql = "SELECT t1.function_id, t1.language, t1.function_name, t1.syntax, t1.description, t1.category_id, t2.language_name as `from_language_name`, big_o_average, big_o_best_case, big_o_worst_case, big_o_average_summary
+		FROM functions as t1
+		LEFT JOIN languages as t2
+		ON t2.language_id = t1.language
+		WHERE t1.function_name = '$possible_function_phrase'";
+		//echo $sql;
+		$result = $mysqli->query($sql)
+		or die ($mysqli->error);
+		$result_rows = $result->num_rows;
+		if ($result_rows > 0) {
+			$correction = false;
+		}
+		else {
+			$sql = "SELECT t1.function_id, t1.language, t1.function_name, t1.syntax, t1.description, t1.category_id, t2.language_name as `from_language_name`	
+			FROM functions as t1
+			LEFT JOIN languages as t2
+			ON t2.language_id = t1.language
+			WHERE t1.function_name = '$second_possiblity'";
+			//echo $sql;
+			$result = $mysqli->query($sql)
+			or die ($mysqli->error);
+			$result_rows = $result->num_rows;
+			$correction = ($result_rows) ? true : false;
+		}
+		if ($result_rows) {
+			$translations = array();
+			$from_functions = array();
+			while ($row = mysqli_fetch_array($result, MYSQLI_ASSOC)) {
+				$lan1 = $row['language'];
+				$lan2 = $language;
+				$from_function_id = $row['function_id'];
+
+				//$mysqli->set_charset('utf8'); //No longer forced since not outputting in JSON
+
+		/*		$sql = "SELECT language, category_id FROM functions WHERE function_id = '$from_function_id'";
+				$result = $mysqli->query($sql)
+				or die ($mysqli->error);
+
+				if ($result->num_rows == 1) {
+					$row = mysqli_fetch_row($result);
+					$lan1 = $row[0];
+					$category_id = $row[1];
+				}
+				else {
+					throw new OutOfRangeException('OutOfRangeException occured on request');
+				}*/
+
+				$from_language = new Language(array(
+					'language_id' => $lan1,
+					'language_name' => $row['from_language_name'])
+				);
+
+				$sql = "SELECT language_name FROM languages WHERE language_id = '$lan2'";
+				$result_fetch_language = $mysqli->query($sql)
+				or die ($mysqli->error);
+				$to_language_name = mysqli_fetch_row($result_fetch_language)[0];
+
+				$to_language = new Language(array(
+					'language_id' => $lan2,
+					'language_name' => $to_language_name)
+				);
+
+				$from_function = new LanguageFunction($row);
+				$from_function->function_language = $from_language;
+
+	/*			$from_function = new LanguageFunction(array(
+					'function_id' => $from_function_id,
+					'function_language' => $from_language, 
+					'category_id' => $category_id)
+				);*/
+				$incoming_translation = new IncomingTranslation(array(
+					'from_function' => $from_function,
+					'to_language' => $to_language)
+				);
+
+				$from_functions[] = $from_function;
+
+				//Now attempt the translations
+				$translation_x = TranslateFactory::translate($incoming_translation, true);
+				$translations[] = $translation_x;
+				//echo $translations[0]->reasons;
+				//print_r($translations);
+				//Finally log that this translation took place		
+				Database::log_translation();
+				//It's a translation request, attempt to parse it using 
+	/*			header("Location: http://paraphrase.io/translate.php?lan1=$lan1&lan2=$language&src=$search_phrase");*/
+			}
+		}
+	}
+	else {
+		$translation = false;
+	}
+}
+//-----------------------------------Parsing for possible translation request ends--------------------------------
+
+//-----------------------------------Load search results--------------------------------------------------------
+if ($language) {
+	$sql = "SELECT t1.description, t2.description, t1.function_name, t1.function_id
+	FROM functions as t1
+	LEFT JOIN category as t2
+	ON t2.category_id = t1.category_id
+	WHERE MATCH(t1.description, t2.description) AGAINST ('$search_phrase')
+	AND t1.language = '$language'
+	ORDER BY MATCH(t1.description, t2.description) AGAINST ('$search_phrase') DESC";
+	$result_functions = $mysqli->query($sql)
+	or die ($mysqli->error);
+}
+else {
+	$sql = "SELECT t1.description, t2.description, t1.function_name, t1.function_id
+	FROM functions as t1
+	LEFT JOIN category as t2
+	ON t2.category_id = t1.category_id
+	WHERE MATCH(t1.description, t2.description) AGAINST ('$search_phrase')
+	ORDER BY MATCH(t1.description, t2.description) AGAINST ('$search_phrase') DESC ";
+	$result_functions = $mysqli->query($sql)
+	or die ($mysqli->error);
+}
+$sql = "SELECT t1.post_text, t1.post_title, t1.post_id, t1.author_id, t1.date_posted, t2.username as `author_username`
+FROM posts as t1
+LEFT JOIN users as t2
+ON t2.user_id = t1.author_id
+WHERE MATCH(t1.post_text, t1.post_title) AGAINST ('$search_phrase')
+ORDER BY MATCH(t1.post_text, t1.post_title) AGAINST ('$search_phrase') DESC";
+$result_posts = $mysqli->query($sql)
+or die ($mysqli->error);
+//--------------------------------------------Parsing for search results end----------------------------------
+?>
+<html ng-app="app">
+	<head>
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<link rel="stylesheet" type="text/css" href="/css/angucomplete/angucomplete.css">
+		<link rel="stylesheet" type="text/css" href="/css/basic.css">
+		<link rel="stylesheet" type="text/css" href="/css/search.css">
+		<link rel="stylesheet" type="text/css" href="/css/bootstrap.min.css">
+		<link rel="stylesheet" type="text/css" href="/css/ngDialog/ngDialog.css">
+		<link rel="stylesheet" type="text/css" href="/css/ngDialog/ngDialog-theme-default.css">
+		<link rel="stylesheet" href="css/highlightjs/tomorrow.css">
+	</head>
+	<body ng-controller="main" class="container-fluid">
+		<div class="row">
+			<div class="col-md-10 col-md-offset-1">
+				<div class="row">
+					<div class="col-md-8">
+						<input type="text" ng-model="searchPhrase" class="form-control" placeholder="Search a function/method/concept to be paraphrased in another language">
+						<p class="help-text" style="text-align:left;">
+							<small>Try searching a function like: "strtoupper()", a method "Quicksort" or a concept "Sending a $http request in AngularJS"</small>
+						</p>
+					</div>
+			        <div class="col-md-2">
+						<select ng-model="selectedLanguageID" class="form-control" required>
+							<option ng-repeat="language in languages" ng-selected="language.language_id == selectedLanguageID" ng-value="language.language_id" ng-show="language.language_id != 11">{{language.language_name}}</option>
+						</select>
+			        </div>
+			        <div class="col-md-1">
+			        	<button class="btn btn-primary" ng-click="attemptTranslation()">Search</button>
+			        </div>
+			        <div class="col-md-1">
+						<button class="btn btn-info">Paraphrase</button>
+			        </div>
+			    </div>
+				<?php
+					if ($translation) {
+						?>
+						<div class="row">
+							<?php
+							//There was a potential translation requested
+							if (isset($translations)) {
+								if (count($translations) == 1) {
+									$translations = $translations[0];
+									//The function being searched for existed in the database and was attempted to be translated
+									if ($correction) {
+										?>
+										<div class="col-md-12">
+											<h6><?php echo $possible_function_phrase;?> was auto-suggested to <?php echo $second_possiblity;?> which is the name the language construct/function is stored under</h6>
+										</div>
+										<?php
+									}
+									?>
+									<div class="col-md-6">
+										<h3><?php echo $from_function->function_language->language_name;?></h3>
+										<small>Translation Request</small>
+										<p>
+											<div hljs source="'<?php echo $from_function->function_name;?>'">
+											</div>
+		<!-- 										<?php echo $from_function->function_name;?>
+											</pre> -->
+											<h4>Overview</h4>
+											<?php echo $from_function->description;?>
+											<h4>Syntax</h4>
+												<div hljs source="'<?php echo $from_function->syntax;?>'">
+												</div>
+											<h4>Big O Performance</h4>
+											<strong><?php echo $from_function->big_o_average_case;?></strong> - 
+											<?php echo $from_function->big_o_average_summary;?>
+										</p>
+									</div>
+									<div class="col-md-6">
+										<h3><?php echo $to_language->language_name;?></h3>
+										<?php 
+										if ($translations[0]->suggested_function) {
+											if ($translations[0]->database_answer) {
+												?>
+												<small>Top Rated Answer - <a href="" ng-click="databaseAnswer()">Database Answer</a> | <a href="" ng-click="expandReasons('<?php echo htmlspecialchars(json_encode($translations[0]->reasons, JSON_PRETTY_PRINT));?>')">Database Annotations</a></small>
+											<?php
+											}
+											else {
+												?>
+												<small>Top Rated Answer - User Answer</small>
+											<?php
+											}
+											?>
+											<p>
+												<div hljs source="'<?php echo $translations[0]->suggested_function->function_name;?>'">
+												</div>
+												<?php 
+												if ($translations[0]->single) {
+													?>
+													<h4>Overview</h4>
+													<?php echo $translations[0]->suggested_function->description;?>
+													<h4>Syntax</h4>
+													<div hljs source="'<?php echo $translations[0]->suggested_function->syntax;?>'">
+													</div>
+												<?php
+												}
+												else {
+													?>
+													<h4>Summary</h4>
+													<?php
+														echo $translations[0]->comment;
+												}
+												?>
+												<h4>
+													Big O Performance
+												</h4>
+													<?php echo $translations[0]->suggested_function->big_o_average_case;?>
+											</p>
+										<?php 
+										}
+										else {
+											?>
+											<p>
+												<h5>No translations found or submitted. <a href="translate.php?id=<?php echo $translations[0]->translation_id?>">Help submit one?</a></h5>
+											</p>
+										<?php
+										}
+										?>
+									</div>
+								<?php
+								}
+								else {
+									?>
+									<div class="col-md-12">
+										<h5><strong>Disambiguation - 
+										<?php
+										$language_string = '';
+										for ($i = 0; $i < count($translations); $i++) {
+											$language_string .= $from_functions[$i]->function_language->language_name . ', ';
+										}
+										$language_string = rtrim($language_string, ', ');
+										echo $language_string;
+										?>
+										</strong></h5>
+									</div>
+									<div class="col-md-6">
+										<tabset>
+											<?php
+											for ($i = 0; $i < count($translations); $i++) {
+												?>
+												<tab select="changeView('<?php echo $i;?>')">
+													<tab-heading>
+														<?php echo $from_functions[$i]->function_language->language_name . "'s " . $from_functions[$i]->function_name;?>
+													</tab-heading>
+													<h3><?php echo $from_functions[$i]->function_language->language_name;?></h3>
+													<small>Translation Request</small>
+													<div hljs source="'<?php echo $from_functions[$i]->function_name;?>'">
+													</div>
+													<h4>Overview</h4>
+													<?php echo nl2br(substr($from_functions[$i]->description, 0, 100));
+													if (strlen($from_functions[$i]->description) > 250) {
+														echo '<a href="translate.php">Read more</a>';
+													}?>
+													<h4>Syntax</h4>
+													<div hljs source="'<?php echo $from_functions[$i]->syntax;?>'">
+													</div>
+												</tab>
+											<?php
+											}
+										?>
+										</tabset>
+									</div>
+									<div class="col-md-6">
+										<?php
+										for ($i = 0; $i < count($from_functions); $i++) {
+											?>
+											<div ng-show="'<?php echo $i;?>' == data.view" style="padding-top:6%;">
+												<?php
+												if ($translations[$i] && $translations[$i]->suggested_function) {
+													?>
+													<h3><?php echo $from_functions[$i]->function_language->language_name;?></h3>
+													<?php
+													if ($translations[$i]->database_answer) {
+														?>
+														<small>Top Rated Answer - <a href="" ng-click="databaseAnswer()">Database Answer</a> | <a href="" ng-click="expandReasons('<?php echo htmlspecialchars(json_encode($translations[$i]->reasons, JSON_PRETTY_PRINT));?>')">Database Annotations</a></small>
+													<?php
+													}
+													else {
+														?>
+														<small>Top Rated Answer - User Answer</small>
+													<?php
+													}
+													?>
+													<p>
+														<div hljs source="'<?php echo $translations[$i]->suggested_function->function_name;?>'">
+														</div>
+														<?php 
+														if ($translations[$i]->single) {
+															?>
+															<h4>Overview</h4>
+															<?php echo $translations[$i]->suggested_function->description;?>
+															<h4>Syntax</h4>
+															<div hljs source="'<?php echo $translations[$i]->suggested_function->syntax;?>'">
+															</div>
+														<?php
+														}
+														else {
+															?>
+															<h4>Summary</h4>
+															<?php
+																echo $translations[$i]->comment;
+														}
+														?>
+														<h4>
+															Big O Performance
+														</h4>
+															<?php echo $translations[$i]->suggested_function->big_o_average_case;?>
+													</p>
+													<?php
+												}
+												else {
+													?>
+
+													<h5 style="text-align:center;">No translations found for <?php echo $from_functions[$i]->function_language->language_name . "'s " . $from_functions[$i]->function_name . ' to ' . $to_language_name;
+													?>
+													</h5>
+													<?php
+												}
+												?>
+											</div>
+										<?php
+										}
+										?>
+									</div>
+									<?php
+								}
+							}
+							else {
+								?>
+								<div class="col-md-10">
+									<h6>Were you requesting a translation? `<?php echo $search_phrase;?>` is not an indexed function in our database. <a href="add.php">Index it?</a></h6>
+								</div>
+							<?php
+							}
+						?>
+					</div>
+					<?php
+						}
+					?>
+				<div class="row">
+					<div class="col-md-12">
+						<h3>Functions</h3>
+					</div>
+					<?php
+					if ($result_functions->num_rows == 0) {
+						?>
+						<div class="col-md-12">
+							<h5>No functions found</h5>
+						</div>
+					<?php
+					}
+					else {
+						while ($row = mysqli_fetch_array($result_functions, MYSQLI_ASSOC)) {
+							$function = new LanguageFunction($row);
+						?>
+						<div class="col-md-12 resultBox">
+							<h3><a href="function.php?id=<?php echo $function->function_id;?>"><?php echo $function->function_name;?></a></h3>
+							<p>
+								<?php echo $function->description;?>
+							</p>
+						</div>
+						<?php }
+					}
+					?>
+				</div>
+				<div class="row">
+					<div class="col-md-12">
+						<h3>Posts</h3>
+					</div>
+					<div class="col-md-12">
+						<?php
+						if ($result_posts->num_rows == 0) {
+							?>
+								<h5>No related posts found</h5>
+						<?php
+						}
+						else {
+							?>
+							<?php
+							while($row = mysqli_fetch_array($result_posts, MYSQLI_ASSOC)) {
+								$post = new Post($row); //For now only searches through posts
+								$post->author->username = $row['author_username'];
+								//Loop through results
+								?>
+								<div class="resultBox">
+									<h3><a href="post.php?id=<?php echo $post->post_id;?>"><?php echo $post->post_title;?></a></h3>
+									<h5><?php echo $post->author->username;?></h5>
+									<p>
+										<?php echo substr($post->post_text, 0, 500);?>....<a href="post.php?id=<?php echo $post->post_id;?>">Read More</a>
+									</p>
+								</div>
+							<?php
+							} //End loop
+						}?>
+					</div>
+				</div>
+			</div>
+		</div>
+	</body>
+</html>
+<script src="/bower_components/angular/angular.min.js"></script>
+<script src="/dependencies/angular-bootstrap/ui-bootstrap-tpls-0.13.0.min.js"></script>
+<script src="dependencies/highlightjs/highlight.pack.js"></script>
+<script src="dependencies/angular-highlight/angular-highlightjs.min.js"></script>
+<script src="dependencies/ngDialog-master/js/ngDialog.min.js"></script>
+<script src="/angular/search/search.js"></script>

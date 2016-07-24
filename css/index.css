@@ -1,0 +1,28 @@
+#form-translate {
+	display: inline-block;
+    text-align: center;
+}
+.centered-box {
+	  position: fixed; /* or absolute if you want it to scroll with the page */
+	  left: 34%;
+	  width: 100%;
+	  margin-left: -280px;
+}
+.row-centered {
+    text-align:center;
+}
+
+p {
+	text-align: center
+}
+
+.languageStats {
+	margin-bottom:10px;
+}
+
+.sideBar hr {
+	margin-top:0px;
+	padding-top:0px;
+	margin-bottom: 10px;
+	padding-bottom: 0px;
+}

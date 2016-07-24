@@ -1,0 +1,13 @@
+- think about how to do type contracts on the translator site
+- aggregate functions
+
+try doing articles for validaitn email and other useful functions:
+- filter_var($email, FILTER_VALIDATE_EMAIL)
+/*
+...and four related artices. Click here to view
+strtoupper()           .toUppercase()
+
+And the related articles might be for example authored posts or other type of media that I haven't thought of yet
+maybe like HH but central hub for peope to view intersting programmin gnews later?
+..Or ask question?
+ */

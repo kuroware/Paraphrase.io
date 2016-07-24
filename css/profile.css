@@ -1,0 +1,20 @@
+a.profileBar {
+	margin-right:5px;
+}
+
+h5.leftbar {
+	display:inline-block;
+	float:left;
+}
+
+.commentBlock {
+	margin-bottom:15px;
+}
+
+.userTag {
+	margin-bottom:5px;
+}
+
+.answerBlock {
+	word-break: break-all;
+}

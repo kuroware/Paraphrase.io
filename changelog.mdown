@@ -1,0 +1,22 @@
+//Changelog for codeTranslator
+
+Notes:
+I think that for the `integral` table, type specifies:
+	1 -> Indexed Functions
+	2 -> Language Popularity
+
+August 6, 2015:
+	- Removed the auto-translate by the PHP code, due to overlapping categories and a one to many relation as the DB scales up. Also 0 and 0 or null and null will be matched as translation which is obviously wrong
+	- Re-factored the translation page to speed up the DOM rendering instead of having AngularJS handle more of the client side then it has to
+	- Added in one-time data binding to a few elements to prevent wasting memory on unncessary watchers
+	- Re-factored the translate code (the hardest function to code, btw), which is what loads the translations for a translation request. It now distinguishes notes and translatoins and single function translations so that an upvoted note won't appear above an answer
+	- Added in comments to translations
+	- Began preliminary code on upvoting and downvoting and editting comments
+	- Removed the posts and questions functionality for now
+	- 
+
+July 17, 2015:
+	- Added in `function_parameters` table which keeps track of the parameters a function expects and has a single column called `type` that signifies whether or not the parameter is an expected input or an expected output
+		*Should be fast selection anyways for now. Not sure if I'm going to create a universal table to avoid overhead costs of calling MySQL. O(log(n)), simple BTREE on parameter_id.
+		** Not sure about adding a 'UNIQUE' constraint on the table, would speed up but data is inflexbile
+	- 

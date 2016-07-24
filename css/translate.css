@@ -1,0 +1,143 @@
+blockquote {
+	font-size:13px;
+}
+
+.centered-box {
+	  position: fixed; /* or absolute if you want it to scroll with the page */
+	  left: 34%;
+	  width: 100%;
+	  margin-left: -300px;
+}
+.row-centered {
+    text-align:center;
+}
+
+.fromTranslate {
+	width:49%;
+	display:inline-block;
+	margin-right:2%;
+	float:left;
+}
+
+.toTranslate {
+	width:49%;
+	display:inline-block;
+	
+}
+h3 {
+	padding:0;
+	margin:0;
+	display:inline-block;
+}
+
+h6 {
+	margin:0;
+}
+
+h2.headerdesc {
+	min-width:100%;
+	display:inline-block;
+}
+
+.translationBlock {
+	height: auto;
+	overflow: hidden;
+	margin-bottom:5px;
+}
+
+.translationAnswer {
+	/*display:inline-block;*/
+	overflow: hidden;
+}
+
+.translations {
+	margin-top:5px;
+	max-width:50%;
+}
+
+form.post {
+	max-width:60%;
+}
+
+.userAvatar {
+	float:right;
+}
+
+.options a {
+	margin-right:10px;
+}
+
+.translationComment {
+	margin-left:15px;
+	margin-bottom:5px;
+}
+
+.translationComment hr{
+	padding:0px;
+	margin-top:5px;
+	margin-bottom:5px;
+}
+
+/*.special {
+    background-color: transparent;
+    font-family: monospace;
+    border:none;
+
+}
+
+{
+	background-color: none;
+	border: none;
+	margin: 0px;
+	background: none;
+}
+*/
+/*code {
+
+	background-color: none;
+	border: none;
+	margin: 0px;
+	background: none;
+
+}
+
+.hljs {
+	background-color: none;
+	border: none;
+	margin: 0px;
+	background: none;
+}*/
+
+.translateStatContainer h3 {
+	text-align:center;
+}
+
+.translateStatContainer h4 {
+	text-align:center;
+}
+
+.contributorBox {
+	margin-bottom:15px;	
+}
+
+.authorBox {
+	display:inline-block;
+	float:right;
+	height:50px;
+}
+.authorBox img {
+	display:inline-block;
+}
+.authorBox a {
+	display:inline-block;
+	vertical-align: top;
+}
+
+.answers {
+	margin-bottom:20px;
+	margin-top:10px;
+}
+
+.comments {
+	margin-top:10px;
+}

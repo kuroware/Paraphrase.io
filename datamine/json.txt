@@ -1,0 +1,1612 @@
+[
+    {
+        "path": "library/array",
+        "name": "array",
+        "type": "Data Types"
+    },
+    {
+        "path": "library/array#array.array",
+        "name": "array.array",
+        "type": "Data Types"
+    },
+    {
+        "path": "library/array#array.array.append",
+        "name": "array.array.append()",
+        "type": "Data Types"
+    },
+    {
+        "path": "library/array#array.array.buffer_info",
+        "name": "array.array.buffer_info()",
+        "type": "Data Types"
+    },
+    {
+        "path": "library/array#array.array.byteswap",
+        "name": "array.array.byteswap()",
+        "type": "Data Types"
+    },
+    {
+        "path": "library/array#array.array.count",
+        "name": "array.array.count()",
+        "type": "Data Types"
+    },
+    {
+        "path": "library/array#array.array.extend",
+        "name": "array.array.extend()",
+        "type": "Data Types"
+    },
+    {
+        "path": "library/array#array.array.frombytes",
+        "name": "array.array.frombytes()",
+        "type": "Data Types"
+    },
+    {
+        "path": "library/array#array.array.fromfile",
+        "name": "array.array.fromfile()",
+        "type": "Data Types"
+    },
+    {
+        "path": "library/array#array.array.fromlist",
+        "name": "array.array.fromlist()",
+        "type": "Data Types"
+    },
+    {
+        "path": "library/array#array.array.fromstring",
+        "name": "array.array.fromstring()",
+        "type": "Data Types"
+    },
+    {
+        "path": "library/array#array.array.fromunicode",
+        "name": "array.array.fromunicode()",
+        "type": "Data Types"
+    },
+    {
+        "path": "library/array#array.array.index",
+        "name": "array.array.index()",
+        "type": "Data Types"
+    },
+    {
+        "path": "library/array#array.array.insert",
+        "name": "array.array.insert()",
+        "type": "Data Types"
+    },
+    {
+        "path": "library/array#array.array.itemsize",
+        "name": "array.array.itemsize",
+        "type": "Data Types"
+    },
+    {
+        "path": "library/array#array.array.pop",
+        "name": "array.array.pop()",
+        "type": "Data Types"
+    },
+    {
+        "path": "library/array#array.array.remove",
+        "name": "array.array.remove()",
+        "type": "Data Types"
+    },
+    {
+        "path": "library/array#array.array.reverse",
+        "name": "array.array.reverse()",
+        "type": "Data Types"
+    },
+    {
+        "path": "library/array#array.array.tobytes",
+        "name": "array.array.tobytes()",
+        "type": "Data Types"
+    },
+    {
+        "path": "library/array#array.array.tofile",
+        "name": "array.array.tofile()",
+        "type": "Data Types"
+    },
+    {
+        "path": "library/array#array.array.tolist",
+        "name": "array.array.tolist()",
+        "type": "Data Types"
+    },
+    {
+        "path": "library/array#array.array.tostring",
+        "name": "array.array.tostring()",
+        "type": "Data Types"
+    },
+    {
+        "path": "library/array#array.array.tounicode",
+        "name": "array.array.tounicode()",
+        "type": "Data Types"
+    },
+    {
+        "path": "library/array#array.array.typecode",
+        "name": "array.array.typecode",
+        "type": "Data Types"
+    },
+    {
+        "path": "library/array#array.typecodes",
+        "name": "array.typecodes",
+        "type": "Data Types"
+    },
+    {
+        "path": "library/bisect",
+        "name": "bisect",
+        "type": "Data Types"
+    },
+    {
+        "path": "library/bisect#bisect.bisect",
+        "name": "bisect.bisect()",
+        "type": "Data Types"
+    },
+    {
+        "path": "library/bisect#bisect.bisect_left",
+        "name": "bisect.bisect_left()",
+        "type": "Data Types"
+    },
+    {
+        "path": "library/bisect#bisect.bisect_right",
+        "name": "bisect.bisect_right()",
+        "type": "Data Types"
+    },
+    {
+        "path": "library/bisect#bisect.insort",
+        "name": "bisect.insort()",
+        "type": "Data Types"
+    },
+    {
+        "path": "library/bisect#bisect.insort_left",
+        "name": "bisect.insort_left()",
+        "type": "Data Types"
+    },
+    {
+        "path": "library/bisect#bisect.insort_right",
+        "name": "bisect.insort_right()",
+        "type": "Data Types"
+    },
+    {
+        "path": "library/calendar",
+        "name": "calendar",
+        "type": "Data Types"
+    },
+    {
+        "path": "library/calendar#calendar.Calendar",
+        "name": "calendar.Calendar",
+        "type": "Data Types"
+    },
+    {
+        "path": "library/calendar#calendar.calendar",
+        "name": "calendar.calendar()",
+        "type": "Data Types"
+    },
+    {
+        "path": "library/calendar#calendar.Calendar.itermonthdates",
+        "name": "calendar.Calendar.itermonthdates()",
+        "type": "Data Types"
+    },
+    {
+        "path": "library/calendar#calendar.Calendar.itermonthdays",
+        "name": "calendar.Calendar.itermonthdays()",
+        "type": "Data Types"
+    },
+    {
+        "path": "library/calendar#calendar.Calendar.itermonthdays2",
+        "name": "calendar.Calendar.itermonthdays2()",
+        "type": "Data Types"
+    },
+    {
+        "path": "library/calendar#calendar.Calendar.iterweekdays",
+        "name": "calendar.Calendar.iterweekdays()",
+        "type": "Data Types"
+    },
+    {
+        "path": "library/calendar#calendar.Calendar.monthdatescalendar",
+        "name": "calendar.Calendar.monthdatescalendar()",
+        "type": "Data Types"
+    },
+    {
+        "path": "library/calendar#calendar.Calendar.monthdays2calendar",
+        "name": "calendar.Calendar.monthdays2calendar()",
+        "type": "Data Types"
+    },
+    {
+        "path": "library/calendar#calendar.Calendar.monthdayscalendar",
+        "name": "calendar.Calendar.monthdayscalendar()",
+        "type": "Data Types"
+    },
+    {
+        "path": "library/calendar#calendar.Calendar.yeardatescalendar",
+        "name": "calendar.Calendar.yeardatescalendar()",
+        "type": "Data Types"
+    },
+    {
+        "path": "library/calendar#calendar.Calendar.yeardays2calendar",
+        "name": "calendar.Calendar.yeardays2calendar()",
+        "type": "Data Types"
+    },
+    {
+        "path": "library/calendar#calendar.Calendar.yeardayscalendar",
+        "name": "calendar.Calendar.yeardayscalendar()",
+        "type": "Data Types"
+    },
+    {
+        "path": "library/calendar#calendar.day_abbr",
+        "name": "calendar.day_abbr",
+        "type": "Data Types"
+    },
+    {
+        "path": "library/calendar#calendar.day_name",
+        "name": "calendar.day_name",
+        "type": "Data Types"
+    },
+    {
+        "path": "library/calendar#calendar.firstweekday",
+        "name": "calendar.firstweekday()",
+        "type": "Data Types"
+    },
+    {
+        "path": "library/calendar#calendar.HTMLCalendar",
+        "name": "calendar.HTMLCalendar",
+        "type": "Data Types"
+    },
+    {
+        "path": "library/calendar#calendar.HTMLCalendar.formatmonth",
+        "name": "calendar.HTMLCalendar.formatmonth()",
+        "type": "Data Types"
+    },
+    {
+        "path": "library/calendar#calendar.HTMLCalendar.formatyear",
+        "name": "calendar.HTMLCalendar.formatyear()",
+        "type": "Data Types"
+    },
+    {
+        "path": "library/calendar#calendar.HTMLCalendar.formatyearpage",
+        "name": "calendar.HTMLCalendar.formatyearpage()",
+        "type": "Data Types"
+    },
+    {
+        "path": "library/calendar#calendar.isleap",
+        "name": "calendar.isleap()",
+        "type": "Data Types"
+    },
+    {
+        "path": "library/calendar#calendar.leapdays",
+        "name": "calendar.leapdays()",
+        "type": "Data Types"
+    },
+    {
+        "path": "library/calendar#calendar.LocaleHTMLCalendar",
+        "name": "calendar.LocaleHTMLCalendar",
+        "type": "Data Types"
+    },
+    {
+        "path": "library/calendar#calendar.LocaleTextCalendar",
+        "name": "calendar.LocaleTextCalendar",
+        "type": "Data Types"
+    },
+    {
+        "path": "library/calendar#calendar.month",
+        "name": "calendar.month()",
+        "type": "Data Types"
+    },
+    {
+        "path": "library/calendar#calendar.monthcalendar",
+        "name": "calendar.monthcalendar()",
+        "type": "Data Types"
+    },
+    {
+        "path": "library/calendar#calendar.monthrange",
+        "name": "calendar.monthrange()",
+        "type": "Data Types"
+    },
+    {
+        "path": "library/calendar#calendar.month_abbr",
+        "name": "calendar.month_abbr",
+        "type": "Data Types"
+    },
+    {
+        "path": "library/calendar#calendar.month_name",
+        "name": "calendar.month_name",
+        "type": "Data Types"
+    },
+    {
+        "path": "library/calendar#calendar.prcal",
+        "name": "calendar.prcal()",
+        "type": "Data Types"
+    },
+    {
+        "path": "library/calendar#calendar.prmonth",
+        "name": "calendar.prmonth()",
+        "type": "Data Types"
+    },
+    {
+        "path": "library/calendar#calendar.setfirstweekday",
+        "name": "calendar.setfirstweekday()",
+        "type": "Data Types"
+    },
+    {
+        "path": "library/calendar#calendar.TextCalendar",
+        "name": "calendar.TextCalendar",
+        "type": "Data Types"
+    },
+    {
+        "path": "library/calendar#calendar.TextCalendar.formatmonth",
+        "name": "calendar.TextCalendar.formatmonth()",
+        "type": "Data Types"
+    },
+    {
+        "path": "library/calendar#calendar.TextCalendar.formatyear",
+        "name": "calendar.TextCalendar.formatyear()",
+        "type": "Data Types"
+    },
+    {
+        "path": "library/calendar#calendar.TextCalendar.prmonth",
+        "name": "calendar.TextCalendar.prmonth()",
+        "type": "Data Types"
+    },
+    {
+        "path": "library/calendar#calendar.TextCalendar.pryear",
+        "name": "calendar.TextCalendar.pryear()",
+        "type": "Data Types"
+    },
+    {
+        "path": "library/calendar#calendar.timegm",
+        "name": "calendar.timegm()",
+        "type": "Data Types"
+    },
+    {
+        "path": "library/calendar#calendar.weekday",
+        "name": "calendar.weekday()",
+        "type": "Data Types"
+    },
+    {
+        "path": "library/calendar#calendar.weekheader",
+        "name": "calendar.weekheader()",
+        "type": "Data Types"
+    },
+    {
+        "path": "library/collections",
+        "name": "collections",
+        "type": "Data Types"
+    },
+    {
+        "path": "library/collections.abc",
+        "name": "collections.abc",
+        "type": "Data Types"
+    },
+    {
+        "path": "library/collections.abc#collections.abc.Callable",
+        "name": "collections.abc.Callable",
+        "type": "Data Types"
+    },
+    {
+        "path": "library/collections.abc#collections.abc.Container",
+        "name": "collections.abc.Container",
+        "type": "Data Types"
+    },
+    {
+        "path": "library/collections.abc#collections.abc.Hashable",
+        "name": "collections.abc.Hashable",
+        "type": "Data Types"
+    },
+    {
+        "path": "library/collections.abc#collections.abc.ItemsView",
+        "name": "collections.abc.ItemsView",
+        "type": "Data Types"
+    },
+    {
+        "path": "library/collections.abc#collections.abc.Iterable",
+        "name": "collections.abc.Iterable",
+        "type": "Data Types"
+    },
+    {
+        "path": "library/collections.abc#collections.abc.Iterator",
+        "name": "collections.abc.Iterator",
+        "type": "Data Types"
+    },
+    {
+        "path": "library/collections.abc#collections.abc.KeysView",
+        "name": "collections.abc.KeysView",
+        "type": "Data Types"
+    },
+    {
+        "path": "library/collections.abc#collections.abc.Mapping",
+        "name": "collections.abc.Mapping",
+        "type": "Data Types"
+    },
+    {
+        "path": "library/collections.abc#collections.abc.MappingView",
+        "name": "collections.abc.MappingView",
+        "type": "Data Types"
+    },
+    {
+        "path": "library/collections.abc#collections.abc.MutableMapping",
+        "name": "collections.abc.MutableMapping",
+        "type": "Data Types"
+    },
+    {
+        "path": "library/collections.abc#collections.abc.MutableSequence",
+        "name": "collections.abc.MutableSequence",
+        "type": "Data Types"
+    },
+    {
+        "path": "library/collections.abc#collections.abc.MutableSet",
+        "name": "collections.abc.MutableSet",
+        "type": "Data Types"
+    },
+    {
+        "path": "library/collections.abc#collections.abc.Sequence",
+        "name": "collections.abc.Sequence",
+        "type": "Data Types"
+    },
+    {
+        "path": "library/collections.abc#collections.abc.Set",
+        "name": "collections.abc.Set",
+        "type": "Data Types"
+    },
+    {
+        "path": "library/collections.abc#collections.abc.Sized",
+        "name": "collections.abc.Sized",
+        "type": "Data Types"
+    },
+    {
+        "path": "library/collections.abc#collections.abc.ValuesView",
+        "name": "collections.abc.ValuesView",
+        "type": "Data Types"
+    },
+    {
+        "path": "library/collections#collections.ChainMap",
+        "name": "collections.ChainMap",
+        "type": "Data Types"
+    },
+    {
+        "path": "library/collections#collections.ChainMap.maps",
+        "name": "collections.ChainMap.maps",
+        "type": "Data Types"
+    },
+    {
+        "path": "library/collections#collections.ChainMap.new_child",
+        "name": "collections.ChainMap.new_child()",
+        "type": "Data Types"
+    },
+    {
+        "path": "library/collections#collections.ChainMap.parents",
+        "name": "collections.ChainMap.parents",
+        "type": "Data Types"
+    },
+    {
+        "path": "library/collections#collections.Counter",
+        "name": "collections.Counter",
+        "type": "Data Types"
+    },
+    {
+        "path": "library/collections#collections.Counter.elements",
+        "name": "collections.Counter.elements()",
+        "type": "Data Types"
+    },
+    {
+        "path": "library/collections#collections.Counter.fromkeys",
+        "name": "collections.Counter.fromkeys()",
+        "type": "Data Types"
+    },
+    {
+        "path": "library/collections#collections.Counter.most_common",
+        "name": "collections.Counter.most_common()",
+        "type": "Data Types"
+    },
+    {
+        "path": "library/collections#collections.Counter.subtract",
+        "name": "collections.Counter.subtract()",
+        "type": "Data Types"
+    },
+    {
+        "path": "library/collections#collections.Counter.update",
+        "name": "collections.Counter.update()",
+        "type": "Data Types"
+    },
+    {
+        "path": "library/collections#collections.defaultdict",
+        "name": "collections.defaultdict",
+        "type": "Data Types"
+    },
+    {
+        "path": "library/collections#collections.defaultdict.default_factory",
+        "name": "collections.defaultdict.default_factory",
+        "type": "Data Types"
+    },
+    {
+        "path": "library/collections#collections.defaultdict.__missing__",
+        "name": "collections.defaultdict.__missing__()",
+        "type": "Data Types"
+    },
+    {
+        "path": "library/collections#collections.deque",
+        "name": "collections.deque",
+        "type": "Data Types"
+    },
+    {
+        "path": "library/collections#collections.deque.append",
+        "name": "collections.deque.append()",
+        "type": "Data Types"
+    },
+    {
+        "path": "library/collections#collections.deque.appendleft",
+        "name": "collections.deque.appendleft()",
+        "type": "Data Types"
+    },
+    {
+        "path": "library/collections#collections.deque.clear",
+        "name": "collections.deque.clear()",
+        "type": "Data Types"
+    },
+    {
+        "path": "library/collections#collections.deque.count",
+        "name": "collections.deque.count()",
+        "type": "Data Types"
+    },
+    {
+        "path": "library/collections#collections.deque.extend",
+        "name": "collections.deque.extend()",
+        "type": "Data Types"
+    },
+    {
+        "path": "library/collections#collections.deque.extendleft",
+        "name": "collections.deque.extendleft()",
+        "type": "Data Types"
+    },
+    {
+        "path": "library/collections#collections.deque.maxlen",
+        "name": "collections.deque.maxlen",
+        "type": "Data Types"
+    },
+    {
+        "path": "library/collections#collections.deque.pop",
+        "name": "collections.deque.pop()",
+        "type": "Data Types"
+    },
+    {
+        "path": "library/collections#collections.deque.popleft",
+        "name": "collections.deque.popleft()",
+        "type": "Data Types"
+    },
+    {
+        "path": "library/collections#collections.deque.remove",
+        "name": "collections.deque.remove()",
+        "type": "Data Types"
+    },
+    {
+        "path": "library/collections#collections.deque.reverse",
+        "name": "collections.deque.reverse()",
+        "type": "Data Types"
+    },
+    {
+        "path": "library/collections#collections.deque.rotate",
+        "name": "collections.deque.rotate()",
+        "type": "Data Types"
+    },
+    {
+        "path": "library/collections#collections.namedtuple",
+        "name": "collections.namedtuple()",
+        "type": "Data Types"
+    },
+    {
+        "path": "library/collections#collections.OrderedDict",
+        "name": "collections.OrderedDict",
+        "type": "Data Types"
+    },
+    {
+        "path": "library/collections#collections.OrderedDict.move_to_end",
+        "name": "collections.OrderedDict.move_to_end()",
+        "type": "Data Types"
+    },
+    {
+        "path": "library/collections#collections.OrderedDict.popitem",
+        "name": "collections.OrderedDict.popitem()",
+        "type": "Data Types"
+    },
+    {
+        "path": "library/collections#collections.somenamedtuple._asdict",
+        "name": "collections.somenamedtuple._asdict()",
+        "type": "Data Types"
+    },
+    {
+        "path": "library/collections#collections.somenamedtuple._fields",
+        "name": "collections.somenamedtuple._fields",
+        "type": "Data Types"
+    },
+    {
+        "path": "library/collections#collections.somenamedtuple._make",
+        "name": "collections.somenamedtuple._make()",
+        "type": "Data Types"
+    },
+    {
+        "path": "library/collections#collections.somenamedtuple._replace",
+        "name": "collections.somenamedtuple._replace()",
+        "type": "Data Types"
+    },
+    {
+        "path": "library/collections#collections.somenamedtuple._source",
+        "name": "collections.somenamedtuple._source",
+        "type": "Data Types"
+    },
+    {
+        "path": "library/collections#collections.UserDict",
+        "name": "collections.UserDict",
+        "type": "Data Types"
+    },
+    {
+        "path": "library/collections#collections.UserDict.data",
+        "name": "collections.UserDict.data",
+        "type": "Data Types"
+    },
+    {
+        "path": "library/collections#collections.UserList",
+        "name": "collections.UserList",
+        "type": "Data Types"
+    },
+    {
+        "path": "library/collections#collections.UserList.data",
+        "name": "collections.UserList.data",
+        "type": "Data Types"
+    },
+    {
+        "path": "library/collections#collections.UserString",
+        "name": "collections.UserString",
+        "type": "Data Types"
+    },
+    {
+        "path": "library/copy",
+        "name": "copy",
+        "type": "Data Types"
+    },
+    {
+        "path": "library/copy#copy.copy",
+        "name": "copy.copy()",
+        "type": "Data Types"
+    },
+    {
+        "path": "library/copy#copy.deepcopy",
+        "name": "copy.deepcopy()",
+        "type": "Data Types"
+    },
+    {
+        "path": "library/copy#copy.error",
+        "name": "copy.error",
+        "type": "Data Types"
+    },
+    {
+        "path": "library/datetime",
+        "name": "datetime",
+        "type": "Data Types"
+    },
+    {
+        "path": "library/datetime#datetime.date",
+        "name": "datetime.date",
+        "type": "Data Types"
+    },
+    {
+        "path": "library/datetime#datetime.date.ctime",
+        "name": "datetime.date.ctime()",
+        "type": "Data Types"
+    },
+    {
+        "path": "library/datetime#datetime.date.day",
+        "name": "datetime.date.day",
+        "type": "Data Types"
+    },
+    {
+        "path": "library/datetime#datetime.date.fromordinal",
+        "name": "datetime.date.fromordinal()",
+        "type": "Data Types"
+    },
+    {
+        "path": "library/datetime#datetime.date.fromtimestamp",
+        "name": "datetime.date.fromtimestamp()",
+        "type": "Data Types"
+    },
+    {
+        "path": "library/datetime#datetime.date.isocalendar",
+        "name": "datetime.date.isocalendar()",
+        "type": "Data Types"
+    },
+    {
+        "path": "library/datetime#datetime.date.isoformat",
+        "name": "datetime.date.isoformat()",
+        "type": "Data Types"
+    },
+    {
+        "path": "library/datetime#datetime.date.isoweekday",
+        "name": "datetime.date.isoweekday()",
+        "type": "Data Types"
+    },
+    {
+        "path": "library/datetime#datetime.date.max",
+        "name": "datetime.date.max",
+        "type": "Data Types"
+    },
+    {
+        "path": "library/datetime#datetime.date.min",
+        "name": "datetime.date.min",
+        "type": "Data Types"
+    },
+    {
+        "path": "library/datetime#datetime.date.month",
+        "name": "datetime.date.month",
+        "type": "Data Types"
+    },
+    {
+        "path": "library/datetime#datetime.date.replace",
+        "name": "datetime.date.replace()",
+        "type": "Data Types"
+    },
+    {
+        "path": "library/datetime#datetime.date.resolution",
+        "name": "datetime.date.resolution",
+        "type": "Data Types"
+    },
+    {
+        "path": "library/datetime#datetime.date.strftime",
+        "name": "datetime.date.strftime()",
+        "type": "Data Types"
+    },
+    {
+        "path": "library/datetime#datetime.date.timetuple",
+        "name": "datetime.date.timetuple()",
+        "type": "Data Types"
+    },
+    {
+        "path": "library/datetime#datetime.date.today",
+        "name": "datetime.date.today()",
+        "type": "Data Types"
+    },
+    {
+        "path": "library/datetime#datetime.date.toordinal",
+        "name": "datetime.date.toordinal()",
+        "type": "Data Types"
+    },
+    {
+        "path": "library/datetime#datetime.date.weekday",
+        "name": "datetime.date.weekday()",
+        "type": "Data Types"
+    },
+    {
+        "path": "library/datetime#datetime.date.year",
+        "name": "datetime.date.year",
+        "type": "Data Types"
+    },
+    {
+        "path": "library/datetime#datetime.date.__format__",
+        "name": "datetime.date.__format__()",
+        "type": "Data Types"
+    },
+    {
+        "path": "library/datetime#datetime.date.__str__",
+        "name": "datetime.date.__str__()",
+        "type": "Data Types"
+    },
+    {
+        "path": "library/datetime#datetime.datetime",
+        "name": "datetime.datetime",
+        "type": "Data Types"
+    },
+    {
+        "path": "library/datetime#datetime.datetime.astimezone",
+        "name": "datetime.datetime.astimezone()",
+        "type": "Data Types"
+    },
+    {
+        "path": "library/datetime#datetime.datetime.combine",
+        "name": "datetime.datetime.combine()",
+        "type": "Data Types"
+    },
+    {
+        "path": "library/datetime#datetime.datetime.ctime",
+        "name": "datetime.datetime.ctime()",
+        "type": "Data Types"
+    },
+    {
+        "path": "library/datetime#datetime.datetime.date",
+        "name": "datetime.datetime.date()",
+        "type": "Data Types"
+    },
+    {
+        "path": "library/datetime#datetime.datetime.day",
+        "name": "datetime.datetime.day",
+        "type": "Data Types"
+    },
+    {
+        "path": "library/datetime#datetime.datetime.dst",
+        "name": "datetime.datetime.dst()",
+        "type": "Data Types"
+    },
+    {
+        "path": "library/datetime#datetime.datetime.fromordinal",
+        "name": "datetime.datetime.fromordinal()",
+        "type": "Data Types"
+    },
+    {
+        "path": "library/datetime#datetime.datetime.fromtimestamp",
+        "name": "datetime.datetime.fromtimestamp()",
+        "type": "Data Types"
+    },
+    {
+        "path": "library/datetime#datetime.datetime.hour",
+        "name": "datetime.datetime.hour",
+        "type": "Data Types"
+    },
+    {
+        "path": "library/datetime#datetime.datetime.isocalendar",
+        "name": "datetime.datetime.isocalendar()",
+        "type": "Data Types"
+    },
+    {
+        "path": "library/datetime#datetime.datetime.isoformat",
+        "name": "datetime.datetime.isoformat()",
+        "type": "Data Types"
+    },
+    {
+        "path": "library/datetime#datetime.datetime.isoweekday",
+        "name": "datetime.datetime.isoweekday()",
+        "type": "Data Types"
+    },
+    {
+        "path": "library/datetime#datetime.datetime.max",
+        "name": "datetime.datetime.max",
+        "type": "Data Types"
+    },
+    {
+        "path": "library/datetime#datetime.datetime.microsecond",
+        "name": "datetime.datetime.microsecond",
+        "type": "Data Types"
+    },
+    {
+        "path": "library/datetime#datetime.datetime.min",
+        "name": "datetime.datetime.min",
+        "type": "Data Types"
+    },
+    {
+        "path": "library/datetime#datetime.datetime.minute",
+        "name": "datetime.datetime.minute",
+        "type": "Data Types"
+    },
+    {
+        "path": "library/datetime#datetime.datetime.month",
+        "name": "datetime.datetime.month",
+        "type": "Data Types"
+    },
+    {
+        "path": "library/datetime#datetime.datetime.now",
+        "name": "datetime.datetime.now()",
+        "type": "Data Types"
+    },
+    {
+        "path": "library/datetime#datetime.datetime.replace",
+        "name": "datetime.datetime.replace()",
+        "type": "Data Types"
+    },
+    {
+        "path": "library/datetime#datetime.datetime.resolution",
+        "name": "datetime.datetime.resolution",
+        "type": "Data Types"
+    },
+    {
+        "path": "library/datetime#datetime.datetime.second",
+        "name": "datetime.datetime.second",
+        "type": "Data Types"
+    },
+    {
+        "path": "library/datetime#datetime.datetime.strftime",
+        "name": "datetime.datetime.strftime()",
+        "type": "Data Types"
+    },
+    {
+        "path": "library/datetime#datetime.datetime.strptime",
+        "name": "datetime.datetime.strptime()",
+        "type": "Data Types"
+    },
+    {
+        "path": "library/datetime#datetime.datetime.time",
+        "name": "datetime.datetime.time()",
+        "type": "Data Types"
+    },
+    {
+        "path": "library/datetime#datetime.datetime.timestamp",
+        "name": "datetime.datetime.timestamp()",
+        "type": "Data Types"
+    },
+    {
+        "path": "library/datetime#datetime.datetime.timetuple",
+        "name": "datetime.datetime.timetuple()",
+        "type": "Data Types"
+    },
+    {
+        "path": "library/datetime#datetime.datetime.timetz",
+        "name": "datetime.datetime.timetz()",
+        "type": "Data Types"
+    },
+    {
+        "path": "library/datetime#datetime.datetime.today",
+        "name": "datetime.datetime.today()",
+        "type": "Data Types"
+    },
+    {
+        "path": "library/datetime#datetime.datetime.toordinal",
+        "name": "datetime.datetime.toordinal()",
+        "type": "Data Types"
+    },
+    {
+        "path": "library/datetime#datetime.datetime.tzinfo",
+        "name": "datetime.datetime.tzinfo",
+        "type": "Data Types"
+    },
+    {
+        "path": "library/datetime#datetime.datetime.tzname",
+        "name": "datetime.datetime.tzname()",
+        "type": "Data Types"
+    },
+    {
+        "path": "library/datetime#datetime.datetime.utcfromtimestamp",
+        "name": "datetime.datetime.utcfromtimestamp()",
+        "type": "Data Types"
+    },
+    {
+        "path": "library/datetime#datetime.datetime.utcnow",
+        "name": "datetime.datetime.utcnow()",
+        "type": "Data Types"
+    },
+    {
+        "path": "library/datetime#datetime.datetime.utcoffset",
+        "name": "datetime.datetime.utcoffset()",
+        "type": "Data Types"
+    },
+    {
+        "path": "library/datetime#datetime.datetime.utctimetuple",
+        "name": "datetime.datetime.utctimetuple()",
+        "type": "Data Types"
+    },
+    {
+        "path": "library/datetime#datetime.datetime.weekday",
+        "name": "datetime.datetime.weekday()",
+        "type": "Data Types"
+    },
+    {
+        "path": "library/datetime#datetime.datetime.year",
+        "name": "datetime.datetime.year",
+        "type": "Data Types"
+    },
+    {
+        "path": "library/datetime#datetime.datetime.__format__",
+        "name": "datetime.datetime.__format__()",
+        "type": "Data Types"
+    },
+    {
+        "path": "library/datetime#datetime.datetime.__str__",
+        "name": "datetime.datetime.__str__()",
+        "type": "Data Types"
+    },
+    {
+        "path": "library/datetime#datetime.time",
+        "name": "datetime.time",
+        "type": "Data Types"
+    },
+    {
+        "path": "library/datetime#datetime.time.dst",
+        "name": "datetime.time.dst()",
+        "type": "Data Types"
+    },
+    {
+        "path": "library/datetime#datetime.time.hour",
+        "name": "datetime.time.hour",
+        "type": "Data Types"
+    },
+    {
+        "path": "library/datetime#datetime.time.isoformat",
+        "name": "datetime.time.isoformat()",
+        "type": "Data Types"
+    },
+    {
+        "path": "library/datetime#datetime.time.max",
+        "name": "datetime.time.max",
+        "type": "Data Types"
+    },
+    {
+        "path": "library/datetime#datetime.time.microsecond",
+        "name": "datetime.time.microsecond",
+        "type": "Data Types"
+    },
+    {
+        "path": "library/datetime#datetime.time.min",
+        "name": "datetime.time.min",
+        "type": "Data Types"
+    },
+    {
+        "path": "library/datetime#datetime.time.minute",
+        "name": "datetime.time.minute",
+        "type": "Data Types"
+    },
+    {
+        "path": "library/datetime#datetime.time.replace",
+        "name": "datetime.time.replace()",
+        "type": "Data Types"
+    },
+    {
+        "path": "library/datetime#datetime.time.resolution",
+        "name": "datetime.time.resolution",
+        "type": "Data Types"
+    },
+    {
+        "path": "library/datetime#datetime.time.second",
+        "name": "datetime.time.second",
+        "type": "Data Types"
+    },
+    {
+        "path": "library/datetime#datetime.time.strftime",
+        "name": "datetime.time.strftime()",
+        "type": "Data Types"
+    },
+    {
+        "path": "library/datetime#datetime.time.tzinfo",
+        "name": "datetime.time.tzinfo",
+        "type": "Data Types"
+    },
+    {
+        "path": "library/datetime#datetime.time.tzname",
+        "name": "datetime.time.tzname()",
+        "type": "Data Types"
+    },
+    {
+        "path": "library/datetime#datetime.time.utcoffset",
+        "name": "datetime.time.utcoffset()",
+        "type": "Data Types"
+    },
+    {
+        "path": "library/datetime#datetime.time.__format__",
+        "name": "datetime.time.__format__()",
+        "type": "Data Types"
+    },
+    {
+        "path": "library/datetime#datetime.time.__str__",
+        "name": "datetime.time.__str__()",
+        "type": "Data Types"
+    },
+    {
+        "path": "library/datetime#datetime.timedelta",
+        "name": "datetime.timedelta",
+        "type": "Data Types"
+    },
+    {
+        "path": "library/datetime#datetime.timedelta.max",
+        "name": "datetime.timedelta.max",
+        "type": "Data Types"
+    },
+    {
+        "path": "library/datetime#datetime.timedelta.min",
+        "name": "datetime.timedelta.min",
+        "type": "Data Types"
+    },
+    {
+        "path": "library/datetime#datetime.timedelta.resolution",
+        "name": "datetime.timedelta.resolution",
+        "type": "Data Types"
+    },
+    {
+        "path": "library/datetime#datetime.timedelta.total_seconds",
+        "name": "datetime.timedelta.total_seconds()",
+        "type": "Data Types"
+    },
+    {
+        "path": "library/datetime#datetime.timezone",
+        "name": "datetime.timezone",
+        "type": "Data Types"
+    },
+    {
+        "path": "library/datetime#datetime.timezone.dst",
+        "name": "datetime.timezone.dst()",
+        "type": "Data Types"
+    },
+    {
+        "path": "library/datetime#datetime.timezone.fromutc",
+        "name": "datetime.timezone.fromutc()",
+        "type": "Data Types"
+    },
+    {
+        "path": "library/datetime#datetime.timezone.tzname",
+        "name": "datetime.timezone.tzname()",
+        "type": "Data Types"
+    },
+    {
+        "path": "library/datetime#datetime.timezone.utc",
+        "name": "datetime.timezone.utc",
+        "type": "Data Types"
+    },
+    {
+        "path": "library/datetime#datetime.timezone.utcoffset",
+        "name": "datetime.timezone.utcoffset()",
+        "type": "Data Types"
+    },
+    {
+        "path": "library/datetime#datetime.tzinfo",
+        "name": "datetime.tzinfo",
+        "type": "Data Types"
+    },
+    {
+        "path": "library/datetime#datetime.tzinfo.dst",
+        "name": "datetime.tzinfo.dst()",
+        "type": "Data Types"
+    },
+    {
+        "path": "library/datetime#datetime.tzinfo.fromutc",
+        "name": "datetime.tzinfo.fromutc()",
+        "type": "Data Types"
+    },
+    {
+        "path": "library/datetime#datetime.tzinfo.tzname",
+        "name": "datetime.tzinfo.tzname()",
+        "type": "Data Types"
+    },
+    {
+        "path": "library/datetime#datetime.tzinfo.utcoffset",
+        "name": "datetime.tzinfo.utcoffset()",
+        "type": "Data Types"
+    },
+    {
+        "path": "library/enum",
+        "name": "enum",
+        "type": "Data Types"
+    },
+    {
+        "path": "library/enum#enum.Enum",
+        "name": "enum.Enum",
+        "type": "Data Types"
+    },
+    {
+        "path": "library/enum#enum.IntEnum",
+        "name": "enum.IntEnum",
+        "type": "Data Types"
+    },
+    {
+        "path": "library/enum#enum.unique",
+        "name": "enum.unique()",
+        "type": "Data Types"
+    },
+    {
+        "path": "library/heapq",
+        "name": "heapq",
+        "type": "Data Types"
+    },
+    {
+        "path": "library/heapq#heapq.heapify",
+        "name": "heapq.heapify()",
+        "type": "Data Types"
+    },
+    {
+        "path": "library/heapq#heapq.heappop",
+        "name": "heapq.heappop()",
+        "type": "Data Types"
+    },
+    {
+        "path": "library/heapq#heapq.heappush",
+        "name": "heapq.heappush()",
+        "type": "Data Types"
+    },
+    {
+        "path": "library/heapq#heapq.heappushpop",
+        "name": "heapq.heappushpop()",
+        "type": "Data Types"
+    },
+    {
+        "path": "library/heapq#heapq.heapreplace",
+        "name": "heapq.heapreplace()",
+        "type": "Data Types"
+    },
+    {
+        "path": "library/heapq#heapq.merge",
+        "name": "heapq.merge()",
+        "type": "Data Types"
+    },
+    {
+        "path": "library/heapq#heapq.nlargest",
+        "name": "heapq.nlargest()",
+        "type": "Data Types"
+    },
+    {
+        "path": "library/heapq#heapq.nsmallest",
+        "name": "heapq.nsmallest()",
+        "type": "Data Types"
+    },
+    {
+        "path": "library/pprint",
+        "name": "pprint",
+        "type": "Data Types"
+    },
+    {
+        "path": "library/pprint#pprint.isreadable",
+        "name": "pprint.isreadable()",
+        "type": "Data Types"
+    },
+    {
+        "path": "library/pprint#pprint.isrecursive",
+        "name": "pprint.isrecursive()",
+        "type": "Data Types"
+    },
+    {
+        "path": "library/pprint#pprint.pformat",
+        "name": "pprint.pformat()",
+        "type": "Data Types"
+    },
+    {
+        "path": "library/pprint#pprint.pprint",
+        "name": "pprint.pprint()",
+        "type": "Data Types"
+    },
+    {
+        "path": "library/pprint#pprint.PrettyPrinter",
+        "name": "pprint.PrettyPrinter",
+        "type": "Data Types"
+    },
+    {
+        "path": "library/pprint#pprint.PrettyPrinter.format",
+        "name": "pprint.PrettyPrinter.format()",
+        "type": "Data Types"
+    },
+    {
+        "path": "library/pprint#pprint.PrettyPrinter.isreadable",
+        "name": "pprint.PrettyPrinter.isreadable()",
+        "type": "Data Types"
+    },
+    {
+        "path": "library/pprint#pprint.PrettyPrinter.isrecursive",
+        "name": "pprint.PrettyPrinter.isrecursive()",
+        "type": "Data Types"
+    },
+    {
+        "path": "library/pprint#pprint.PrettyPrinter.pformat",
+        "name": "pprint.PrettyPrinter.pformat()",
+        "type": "Data Types"
+    },
+    {
+        "path": "library/pprint#pprint.PrettyPrinter.pprint",
+        "name": "pprint.PrettyPrinter.pprint()",
+        "type": "Data Types"
+    },
+    {
+        "path": "library/pprint#pprint.saferepr",
+        "name": "pprint.saferepr()",
+        "type": "Data Types"
+    },
+    {
+        "path": "library/reprlib",
+        "name": "reprlib",
+        "type": "Data Types"
+    },
+    {
+        "path": "library/reprlib#reprlib.aRepr",
+        "name": "reprlib.aRepr",
+        "type": "Data Types"
+    },
+    {
+        "path": "library/reprlib#reprlib.recursive_repr",
+        "name": "reprlib.recursive_repr()",
+        "type": "Data Types"
+    },
+    {
+        "path": "library/reprlib#reprlib.Repr",
+        "name": "reprlib.Repr",
+        "type": "Data Types"
+    },
+    {
+        "path": "library/reprlib#reprlib.repr",
+        "name": "reprlib.repr()",
+        "type": "Data Types"
+    },
+    {
+        "path": "library/reprlib#reprlib.Repr.maxarray",
+        "name": "reprlib.Repr.maxarray",
+        "type": "Data Types"
+    },
+    {
+        "path": "library/reprlib#reprlib.Repr.maxdeque",
+        "name": "reprlib.Repr.maxdeque",
+        "type": "Data Types"
+    },
+    {
+        "path": "library/reprlib#reprlib.Repr.maxdict",
+        "name": "reprlib.Repr.maxdict",
+        "type": "Data Types"
+    },
+    {
+        "path": "library/reprlib#reprlib.Repr.maxfrozenset",
+        "name": "reprlib.Repr.maxfrozenset",
+        "type": "Data Types"
+    },
+    {
+        "path": "library/reprlib#reprlib.Repr.maxlevel",
+        "name": "reprlib.Repr.maxlevel",
+        "type": "Data Types"
+    },
+    {
+        "path": "library/reprlib#reprlib.Repr.maxlist",
+        "name": "reprlib.Repr.maxlist",
+        "type": "Data Types"
+    },
+    {
+        "path": "library/reprlib#reprlib.Repr.maxlong",
+        "name": "reprlib.Repr.maxlong",
+        "type": "Data Types"
+    },
+    {
+        "path": "library/reprlib#reprlib.Repr.maxother",
+        "name": "reprlib.Repr.maxother",
+        "type": "Data Types"
+    },
+    {
+        "path": "library/reprlib#reprlib.Repr.maxset",
+        "name": "reprlib.Repr.maxset",
+        "type": "Data Types"
+    },
+    {
+        "path": "library/reprlib#reprlib.Repr.maxstring",
+        "name": "reprlib.Repr.maxstring",
+        "type": "Data Types"
+    },
+    {
+        "path": "library/reprlib#reprlib.Repr.maxtuple",
+        "name": "reprlib.Repr.maxtuple",
+        "type": "Data Types"
+    },
+    {
+        "path": "library/reprlib#reprlib.Repr.repr",
+        "name": "reprlib.Repr.repr()",
+        "type": "Data Types"
+    },
+    {
+        "path": "library/reprlib#reprlib.Repr.repr1",
+        "name": "reprlib.Repr.repr1()",
+        "type": "Data Types"
+    },
+    {
+        "path": "library/types",
+        "name": "types",
+        "type": "Data Types"
+    },
+    {
+        "path": "library/types#types.BuiltinFunctionType",
+        "name": "types.BuiltinFunctionType",
+        "type": "Data Types"
+    },
+    {
+        "path": "library/types#types.BuiltinMethodType",
+        "name": "types.BuiltinMethodType",
+        "type": "Data Types"
+    },
+    {
+        "path": "library/types#types.CodeType",
+        "name": "types.CodeType",
+        "type": "Data Types"
+    },
+    {
+        "path": "library/types#types.DynamicClassAttribute",
+        "name": "types.DynamicClassAttribute()",
+        "type": "Data Types"
+    },
+    {
+        "path": "library/types#types.FrameType",
+        "name": "types.FrameType",
+        "type": "Data Types"
+    },
+    {
+        "path": "library/types#types.FunctionType",
+        "name": "types.FunctionType",
+        "type": "Data Types"
+    },
+    {
+        "path": "library/types#types.GeneratorType",
+        "name": "types.GeneratorType",
+        "type": "Data Types"
+    },
+    {
+        "path": "library/types#types.GetSetDescriptorType",
+        "name": "types.GetSetDescriptorType",
+        "type": "Data Types"
+    },
+    {
+        "path": "library/types#types.LambdaType",
+        "name": "types.LambdaType",
+        "type": "Data Types"
+    },
+    {
+        "path": "library/types#types.MappingProxyType",
+        "name": "types.MappingProxyType",
+        "type": "Data Types"
+    },
+    {
+        "path": "library/types#types.MappingProxyType.copy",
+        "name": "types.MappingProxyType.copy()",
+        "type": "Data Types"
+    },
+    {
+        "path": "library/types#types.MappingProxyType.get",
+        "name": "types.MappingProxyType.get()",
+        "type": "Data Types"
+    },
+    {
+        "path": "library/types#types.MappingProxyType.items",
+        "name": "types.MappingProxyType.items()",
+        "type": "Data Types"
+    },
+    {
+        "path": "library/types#types.MappingProxyType.keys",
+        "name": "types.MappingProxyType.keys()",
+        "type": "Data Types"
+    },
+    {
+        "path": "library/types#types.MappingProxyType.values",
+        "name": "types.MappingProxyType.values()",
+        "type": "Data Types"
+    },
+    {
+        "path": "library/types#types.MemberDescriptorType",
+        "name": "types.MemberDescriptorType",
+        "type": "Data Types"
+    },
+    {
+        "path": "library/types#types.MethodType",
+        "name": "types.MethodType",
+        "type": "Data Types"
+    },
+    {
+        "path": "library/types#types.ModuleType",
+        "name": "types.ModuleType",
+        "type": "Data Types"
+    },
+    {
+        "path": "library/types#types.ModuleType.__doc__",
+        "name": "types.ModuleType.__doc__",
+        "type": "Data Types"
+    },
+    {
+        "path": "library/types#types.ModuleType.__loader__",
+        "name": "types.ModuleType.__loader__",
+        "type": "Data Types"
+    },
+    {
+        "path": "library/types#types.ModuleType.__name__",
+        "name": "types.ModuleType.__name__",
+        "type": "Data Types"
+    },
+    {
+        "path": "library/types#types.ModuleType.__package__",
+        "name": "types.ModuleType.__package__",
+        "type": "Data Types"
+    },
+    {
+        "path": "library/types#types.new_class",
+        "name": "types.new_class()",
+        "type": "Data Types"
+    },
+    {
+        "path": "library/types#types.prepare_class",
+        "name": "types.prepare_class()",
+        "type": "Data Types"
+    },
+    {
+        "path": "library/types#types.SimpleNamespace",
+        "name": "types.SimpleNamespace",
+        "type": "Data Types"
+    },
+    {
+        "path": "library/types#types.TracebackType",
+        "name": "types.TracebackType",
+        "type": "Data Types"
+    },
+    {
+        "path": "library/weakref",
+        "name": "weakref",
+        "type": "Data Types"
+    },
+    {
+        "path": "library/weakref#weakref.CallableProxyType",
+        "name": "weakref.CallableProxyType",
+        "type": "Data Types"
+    },
+    {
+        "path": "library/weakref#weakref.finalize",
+        "name": "weakref.finalize",
+        "type": "Data Types"
+    },
+    {
+        "path": "library/weakref#weakref.finalize.alive",
+        "name": "weakref.finalize.alive",
+        "type": "Data Types"
+    },
+    {
+        "path": "library/weakref#weakref.finalize.atexit",
+        "name": "weakref.finalize.atexit",
+        "type": "Data Types"
+    },
+    {
+        "path": "library/weakref#weakref.finalize.detach",
+        "name": "weakref.finalize.detach()",
+        "type": "Data Types"
+    },
+    {
+        "path": "library/weakref#weakref.finalize.peek",
+        "name": "weakref.finalize.peek()",
+        "type": "Data Types"
+    },
+    {
+        "path": "library/weakref#weakref.finalize.__call__",
+        "name": "weakref.finalize.__call__()",
+        "type": "Data Types"
+    },
+    {
+        "path": "library/weakref#weakref.getweakrefcount",
+        "name": "weakref.getweakrefcount()",
+        "type": "Data Types"
+    },
+    {
+        "path": "library/weakref#weakref.getweakrefs",
+        "name": "weakref.getweakrefs()",
+        "type": "Data Types"
+    },
+    {
+        "path": "library/weakref#weakref.proxy",
+        "name": "weakref.proxy()",
+        "type": "Data Types"
+    },
+    {
+        "path": "library/weakref#weakref.ProxyType",
+        "name": "weakref.ProxyType",
+        "type": "Data Types"
+    },
+    {
+        "path": "library/weakref#weakref.ProxyTypes",
+        "name": "weakref.ProxyTypes",
+        "type": "Data Types"
+    },
+    {
+        "path": "library/weakref#weakref.ref",
+        "name": "weakref.ref",
+        "type": "Data Types"
+    },
+    {
+        "path": "library/weakref#weakref.ref.__callback__",
+        "name": "weakref.ref.__callback__",
+        "type": "Data Types"
+    },
+    {
+        "path": "library/weakref#weakref.ReferenceError",
+        "name": "weakref.ReferenceError",
+        "type": "Data Types"
+    },
+    {
+        "path": "library/weakref#weakref.ReferenceType",
+        "name": "weakref.ReferenceType",
+        "type": "Data Types"
+    },
+    {
+        "path": "library/weakref#weakref.WeakKeyDictionary",
+        "name": "weakref.WeakKeyDictionary",
+        "type": "Data Types"
+    },
+    {
+        "path": "library/weakref#weakref.WeakKeyDictionary.keyrefs",
+        "name": "weakref.WeakKeyDictionary.keyrefs()",
+        "type": "Data Types"
+    },
+    {
+        "path": "library/weakref#weakref.WeakMethod",
+        "name": "weakref.WeakMethod",
+        "type": "Data Types"
+    },
+    {
+        "path": "library/weakref#weakref.WeakSet",
+        "name": "weakref.WeakSet",
+        "type": "Data Types"
+    },
+    {
+        "path": "library/weakref#weakref.WeakValueDictionary",
+        "name": "weakref.WeakValueDictionary",
+        "type": "Data Types"
+    },
+    {
+        "path": "library/weakref#weakref.WeakValueDictionary.valuerefs",
+        "name": "weakref.WeakValueDictionary.valuerefs()",
+        "type": "Data Types"
+    }
+]

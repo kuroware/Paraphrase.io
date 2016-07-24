@@ -1,0 +1,8 @@
+<?php
+$request = file_get_contents('php://input');
+$data = json_decode($request);
+try {
+	if (is_numeric($user_id) && (is_numeric($translation_id))) {
+	
+	}
+}

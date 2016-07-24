@@ -1,0 +1,32 @@
+.authorBlock img {
+	height:50px;
+	width:auto;
+}
+
+.authorBlock h5 {
+	padding-top:0px;
+	margin-top:0px;
+	position:absolute;
+	top:0px;
+	margin-bottom:10px;	
+}
+
+.optionBox a{
+	margin-right:10px;
+
+}
+
+.questionTitle hr {
+	margin-top:0px;
+	margin-bottom:0px;
+	padding-bottom:0px;
+	padding-top:0px;
+}
+
+.statsBar span {
+	margin-right:5px;
+}
+
+.statsBar {
+	margin-top:10px;
+}

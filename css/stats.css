@@ -1,0 +1,12 @@
+.graphBox h3, h4, h5 {
+	text-align:center;
+}
+.graphBox canvas {
+	margin-bottom:50px;
+}
+.filters {
+	float:right;
+}
+.filters a {
+	margin-right:5px;
+}
